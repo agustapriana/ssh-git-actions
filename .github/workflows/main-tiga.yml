@@ -1,0 +1,21 @@
+name: CI CD 3
+on:
+  push:
+    branches: [ percobaan-1 ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build and Deploy
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Publish
+        uses: nogsantos/scp-deploy@master
+        with:
+          src: ./*
+          host: ${{ secrets.SSH_HOST }}
+          remote: home/researchlbs/public_html/apriana
+          port: 22
+          user: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
