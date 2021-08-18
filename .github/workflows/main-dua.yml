@@ -18,5 +18,6 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
-        source: "*, !.github, !.git, !.DS_Store"
+        # source: "*, !.github, !.git, !.DS_Store"
+        source: "test/*"
         target: "~/public_html/apriana"
