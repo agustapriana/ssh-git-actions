@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: apt install sshpass
+      - run: sudo apt-get install sshpass
       - run: sshpass -p "${{ secrets.PASSWORD }}" scp ./* researchlbs@limasakti.co.id:/home/researchlbs/public_html/apriana
