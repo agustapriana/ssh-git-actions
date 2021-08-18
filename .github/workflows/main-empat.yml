@@ -17,4 +17,4 @@ jobs:
           PASSWORD: ${{ secrets.FTP_PASSWORD }}
         with:
           source: '*'
-          target: '/home/researchlbs/public_html/apriana'
+          target: '~/public_html/apriana'
