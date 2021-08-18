@@ -13,9 +13,9 @@ jobs:
         env:
           HOST: ${{ secrets.SSH_HOST }}
           USERNAME: ${{ secrets.SSH_USERNAME }}
-          PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          # PORT: 22
-          # KEY: ${{ secrets.SSH_KEY }}
+          # PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          PORT: 22
+          KEY: ${{ secrets.SSH_KEY }}
         with:
           source: "*"
           target: "/public_html/apriana"
