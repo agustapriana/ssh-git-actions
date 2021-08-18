@@ -18,7 +18,6 @@ jobs:
         rm -r deploy
         rm -r .git
         rm -r .github
-        rm .DS_STORE
         cd ..
 
 
