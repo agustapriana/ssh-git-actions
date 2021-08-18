@@ -11,8 +11,8 @@ jobs:
       - name: Get Latest Code
         uses: actions/checkout@v2
       - name: Sync Files
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        with:
-          server: 223.27.147.38
-          username: researchlbs
-          password: ${{ secrets.FTP_PASSWORD }}
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          REMOTE_HOST: 223.27.147.38
+          REMOTE_USER: researchlbs
