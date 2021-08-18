@@ -11,6 +11,9 @@ jobs:
     - name: checks-out repository 
       uses: actions/checkout@master
 
+    - name: cd directory
+      run: cd test
+
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
       with:
@@ -19,5 +22,5 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
         # source: "*, !.github, !.git, !.DS_Store"
-        source: "test/*"
+        source: "*"
         target: "~/public_html/apriana"
