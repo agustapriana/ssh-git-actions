@@ -14,7 +14,7 @@ jobs:
         env:
           USERNAME: ${{ secrets.SSH_USERNAME }}
           HOST: ${{ secrets.SSH_HOST }}
-          KEY: ${{ secrets.SSH_KEY }}
+          PASSWORD: ${{ secrets.FTP_PASSWORD }}
         with:
           source: '*'
           target: '/home/researchlbs/public_html/apriana'
