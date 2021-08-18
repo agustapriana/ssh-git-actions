@@ -15,5 +15,5 @@ jobs:
           HOST: ${{ secrets.SSH_HOST }}
           KEY: ${{ secrets.SSH_KEY }}
         with:
-          source: './*'
+          source: '*'
           target: '/home/researchlbs/public_html/apriana'
