@@ -13,6 +13,8 @@ jobs:
 
     - name: Create folder and copy file
       run: mkdir deploy && && cp -R ./* deploy
+
+    - name: check folder is created
       run: ls delpoy
 
     - name: copy file via ssh password
