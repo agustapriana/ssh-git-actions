@@ -1,21 +1,21 @@
-name: Identifier Name
+name: CI CD LAGI
 on:
   push:
     branches: [ percobaan-1 ]
 
 jobs:
-  deploy:    
+  deploy:
     runs-on: ubuntu-latest
+    env:
+      BASEURL: ''
     steps:
       - uses: actions/checkout@v2
-      - name: Deploy source-code
-        uses: appleboy/scp-action@master
-        env:
-          HOST: ${{ secrets.SSH_HOST }}
-          USERNAME: ${{ secrets.SSH_USERNAME }}
-          # PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          PORT: 22
-          KEY: ${{ secrets.SSH_KEY }}
         with:
-          source: "*"
-          target: "home/researchlbs/public_html/apriana"
+          fetch-depth: 1
+      - name: deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{secrets.FTP_SERVER}}
+          username: ${{secrets.FTP_USERNAME}}
+          password: ${{secrets.FTP_PASSWORD}}
+          local-dir: ./*
