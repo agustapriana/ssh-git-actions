@@ -18,4 +18,4 @@ jobs:
           KEY: ${{ secrets.SSH_KEY }}
         with:
           source: "*"
-          target: "/public_html/apriana"
+          target: "home/researchlbs/public_html/apriana"
