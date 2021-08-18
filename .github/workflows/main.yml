@@ -13,8 +13,8 @@ jobs:
         with:
           fetch-depth: 1
       - name: deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@@4.1.0
         with:
-          server: ${{secrets.FTP_SERVER}}
-          username: ${{secrets.FTP_USERNAME}}
+          server: ftp.research.limasakti.co.id
+          username: ftpactions
           password: ${{secrets.FTP_PASSWORD}}
