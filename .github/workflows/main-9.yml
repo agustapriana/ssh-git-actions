@@ -16,5 +16,5 @@ jobs:
         username: ftpactions@research.limasakti.co.id
         password: ${{ secrets.FTP_PASSWORD }}
         port: 21
-        # source: "tests/a.txt,tests/b.txt"
+        source: "*"
         target: "apriana"
