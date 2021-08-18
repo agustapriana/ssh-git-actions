@@ -8,9 +8,14 @@ jobs:
     name: deploy
     runs-on: ubuntu-latest
     steps:
-    - name: action
+    - name: checks-out repository 
       uses: actions/checkout@master
-      
+
+    - name: Create folder and copy file
+      run: |
+      mkdir deploy && && cp -R ./* deploy
+          ls delpoy
+
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
       with:
