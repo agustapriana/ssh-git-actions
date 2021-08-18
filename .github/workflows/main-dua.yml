@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    
     - name: create folder and copy file
       run: |
       mkdir deploy && cp -R ./* deploy
