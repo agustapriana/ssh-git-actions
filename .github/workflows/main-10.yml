@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Latest Code
-      uses: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: Sync Files
-      uses: easingthemes/ssh-deploy@v2.1.5
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-        REMOTE_HOST: 223.27.147.38
-        REMOTE_USER: researchlbs
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          REMOTE_HOST: 223.27.147.38
+          REMOTE_USER: researchlbs
