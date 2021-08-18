@@ -15,7 +15,7 @@ jobs:
       run: mkdir -p deploy && rsync -Rr ./ ./deploy/
 
     - name: check folder is created
-      run: ls delpoy
+      run: ls deploy
 
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
