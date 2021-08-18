@@ -21,4 +21,4 @@ jobs:
         # source: "*, !.github, !.git, !.DS_Store"
         source: "./test/*"
         target: "~/public_html/apriana"
-        strip_components: 2
+        strip_components: 1
