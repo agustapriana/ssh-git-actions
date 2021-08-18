@@ -18,5 +18,5 @@ jobs:
           ftp_host: ftp.research.limasakti.co.id
           ftp_username: ftpactions@research.limasakti.co.id
           ftp_password: ${{ secrets.FTP_PASSWORD }}
-          local_source_dir: "*"
+          # local_source_dir: "*"
           dist_target_dir: "home/researchlbs/public_html/apriana"
