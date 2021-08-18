@@ -17,4 +17,4 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         port: 21
         source: "*"
-        target: "home/researchlbs/public_html/apriana"
+        target: "~/public_html/apriana"
