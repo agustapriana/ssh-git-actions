@@ -12,9 +12,8 @@ jobs:
       uses: actions/checkout@master
 
     - name: Create folder and copy file
-      run: |
-      mkdir deploy && && cp -R ./* deploy
-          ls delpoy
+      run: mkdir deploy && && cp -R ./* deploy
+      run: ls delpoy
 
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
