@@ -15,8 +15,10 @@ jobs:
       run: |
         mkdir -p deploy && rsync -Rr ./ ./deploy/
         cd deploy
+        rm -r deploy
         rm -r .git
         rm -r .github
+        rm .DS_STORE
         cd ..
 
 
@@ -27,5 +29,5 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
-        source: "deploy"
+        source: "deploy/*"
         target: "~/public_html/apriana"
