@@ -11,8 +11,8 @@ jobs:
     - name: checks-out repository 
       uses: actions/checkout@master
 
-    - name: Create folder and copy file
-      run: mkdir deploy && && cp -R ./* deploy
+    - name: Create folder
+      run: mkdir deploy && cp -R ./* deploy
 
     - name: check folder is created
       run: ls delpoy
