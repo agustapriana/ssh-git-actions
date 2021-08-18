@@ -7,11 +7,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      steps:
-    - uses: actions/checkout@v1
-    - run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
-        chmod 700 ~/.ssh/id_rsa
-        ssh-keyscan -H research.limasakti.co.id >> ~/.ssh/known_hosts
-        scp -o StrictHostKeyChecking=no -r ./* researchlbs@limasakti.co.id:/home/researchlbs/public_html/apriana
+      - uses: actions/checkout@v1
+      - run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 700 ~/.ssh/id_rsa
+          ssh-keyscan -H research.limasakti.co.id >> ~/.ssh/known_hosts
+          scp -o StrictHostKeyChecking=no -r ./* researchlbs@limasakti.co.id:/home/researchlbs/public_html/apriana
